@@ -9,7 +9,6 @@ import { HeroSelectComponent } from './hero-select/hero-select.component';
 import { MatcherComponent } from './matcher/matcher.component';
 import { HeroListComponent } from './hero-list/hero-list.component';
 import { DiceFooterComponent } from './dice-footer/dice-footer.component';
-import { HeroComponent } from './hero/hero.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +19,7 @@ import { HeroComponent } from './hero/hero.component';
     MatcherComponent,
     HeroListComponent,
     DiceFooterComponent,
-    HeroComponent
+
   ],
   imports: [
     BrowserModule,
