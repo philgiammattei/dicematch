@@ -1,0 +1,3 @@
+<div *ngFor="let player of players">{{player.name}}</div>
+<button [hidden]="players.length >= 6" (click)="addPlayer()">+</button>
+<button [hidden]="players.length <= 2" (click)="removePlayer()">-</button>

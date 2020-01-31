@@ -1,0 +1,6 @@
+<div class="hero-card-container" *ngIf="players[0].hero !== ''">
+<div class="hero-card" *ngFor="let player of players">
+  <h2>{{player.name}} is: </h2>
+  <h1>The {{player.hero}}!!!</h1>
+</div>
+</div>

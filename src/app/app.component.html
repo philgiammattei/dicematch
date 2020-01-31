@@ -1,4 +1,8 @@
-<h1>Player 1</h1>
-<h2>{{player1}}</h2>
-<h1>Player 2</h1>
-<h2>{{player2}}</h2>
+<div class="app-container">
+<app-dice-header></app-dice-header>
+<app-num-players [players]="players" (numPlayers)="setPlayers($event)"></app-num-players>
+<app-hero-select [heroes]="heroes" (heroesEmit)="setHeroes($event)"></app-hero-select>
+<app-matcher [tooManyPlayers]="tooManyPlayers"(matchEmit)="matchmake()"></app-matcher>
+<app-hero-list [players]="players"></app-hero-list>
+<app-dice-footer></app-dice-footer>
+</div>

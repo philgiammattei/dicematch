@@ -1,0 +1,8 @@
+<div class="hero-select">
+<h3>Select your heroes:</h3>
+<button *ngFor="let hero of heroes" (click)="toggleHero(hero)"
+  [ngClass]="{'hero-selected': hero.selected,
+  'hero-unselected': !hero.selected}">
+  {{hero.name}}
+  </button>
+</div>
