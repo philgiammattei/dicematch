@@ -8,6 +8,7 @@ import {Player} from '../player';
 })
 export class HeroListComponent implements OnInit {
   @Input() players: Player[];
+  @Input() teamSize: number;
 
   constructor() { }
 

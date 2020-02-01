@@ -1,3 +1,13 @@
-<div *ngFor="let player of players">{{player.name}}</div>
+<div *ngFor="let player of players"><input [(ngModel)]="player.name"/></div>
 <button [hidden]="players.length >= 6" (click)="addPlayer()">+</button>
 <button [hidden]="players.length <= 2" (click)="removePlayer()">-</button>
+<br>
+<button (click)="setTeamSize(1)">Free For All</button>
+<button
+  *ngIf="players.length === 4
+  || players.length === 6"
+  (click)="setTeamSize(2)">
+  Teams of 2
+</button>
+<button *ngIf="players.length === 6"
+        (click)="setTeamSize(3)">Teams of 3</button>

@@ -11,29 +11,31 @@ export class AppComponent {
   title = 'dicematch';
   players: Player[] = [];
   heroes: Hero[] = [
-    new Hero('Barbarian'),
-    new Hero('Moon Elf'),
-    new Hero('Monk'),
-    new Hero('Pyromancer'),
-    new Hero('Paladin'),
-    new Hero('Shadow Thief'),
-    new Hero('Samurai'),
-    new Hero('Gunslinger'),
-    new Hero('Cursed Pirate'),
-    new Hero('Tactician'),
-    new Hero('Huntress'),
-    new Hero('Artificer'),
-    new Hero('Vampire Lord'),
-    new Hero('Seraph'),
+    new Hero('Barbarian', 1),
+    new Hero('Moon Elf', 1),
+    new Hero('Monk', 1),
+    new Hero('Pyromancer', 1),
+    new Hero('Paladin', 1),
+    new Hero('Shadow Thief', 1),
+    new Hero('Samurai', 2),
+    new Hero('Gunslinger', 2),
+    new Hero('Cursed Pirate', 2),
+    new Hero('Tactician', 2),
+    new Hero('Huntress', 2),
+    new Hero('Artificer', 2),
+    new Hero('Vampire Lord', 2),
+    new Hero('Seraph', 2),
   ];
   selectedHeroes: Hero[];
   tooManyPlayers = false;
+  teamSize = 1;
 
   constructor() {
     this.selectedHeroes = this.heroes;
   }
 
   setPlayers(players: Player[]) {
+    this.players = [];
     this.players = players;
     this.comparePlayersAndHeroes();
   }
@@ -58,6 +60,11 @@ export class AppComponent {
     } else {
       this.tooManyPlayers = false;
     }
+  }
+
+  setTeamSize(size: number) {
+    this.teamSize = size;
+    console.log(this.teamSize);
   }
 
   // tslint:disable-next-line: use-lifecycle-interface

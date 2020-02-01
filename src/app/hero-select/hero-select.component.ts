@@ -19,6 +19,24 @@ export class HeroSelectComponent implements OnInit {
 
   toggleHero(hero: Hero) {
     hero.selected = !hero.selected;
+  }
+
+  toggleAll(select: boolean) {
+    this.heroes.forEach(hero => hero.selected = select ? true : false);
+    this.heroesEmit.emit(this.heroes);
+  }
+
+  //if not all season heroes are selected, select all in season
+  //otherwise deselect all from season
+  toggleSeason(season: number) {
+    if (!this.heroes.filter(hero => hero.season === season)
+      .every(hero => hero.selected)) {
+      this.heroes.filter(hero => hero.season === season)
+        .forEach(hero => hero.selected = true);
+    } else {
+      this.heroes.filter(hero => hero.season === season)
+        .forEach(hero => hero.selected = false);
+    }
     this.heroesEmit.emit(this.heroes);
   }
 

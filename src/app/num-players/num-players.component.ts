@@ -8,7 +8,10 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class NumPlayersComponent implements OnInit {
   @Input() players: Player[];
+  @Input() name: string;
+  @Input() teamSize: number;
   @Output() numPlayers = new EventEmitter<Player[]>();
+  @Output() sizeEmit = new EventEmitter<number>();
 
   constructor() { }
 
@@ -28,6 +31,12 @@ export class NumPlayersComponent implements OnInit {
       this.players.pop();
       this.numPlayers.emit(this.players);
     }
+  }
+
+  setTeamSize(size: number) {
+    this.teamSize = size;
+    this.sizeEmit.emit(this.teamSize);
+    console.log(this.teamSize);
   }
 
 }
