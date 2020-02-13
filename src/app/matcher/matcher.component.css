@@ -1,0 +1,14 @@
+.container {
+  text-align: center;
+}
+
+.match-button {
+width: 200px;
+height: 150px;
+font-size: 45px;
+border-radius: 20px;
+margin-top: 15px;
+font-family: 'Sigmar One', cursive;
+color: #ff4500;
+background-color: #2F4F4F;
+}

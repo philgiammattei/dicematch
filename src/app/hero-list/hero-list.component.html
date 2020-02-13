@@ -1,7 +1,8 @@
 <div class="hero-card-container" *ngIf="players[0].hero !== ''">
+
 <div class="hero-card" *ngFor="let player of players, let i = index">
   <div class="hero-if" *ngIf="player.hero !== ''">
-  <h1 *ngIf="(teamSize === 2 || teamSize === 3) && i % teamSize === 0">Team</h1>
+  <h1 *ngIf="(teamSize === 2 || teamSize === 3) && i % teamSize === 0">Team {{teamNames[i]}}</h1>
   <h3>{{player.name}} is: </h3>
   <h2>The {{player.hero}}!!!</h2>
 </div>

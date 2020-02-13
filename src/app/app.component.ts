@@ -64,7 +64,6 @@ export class AppComponent {
 
   setTeamSize(size: number) {
     this.teamSize = size;
-    console.log(this.teamSize);
   }
 
   // tslint:disable-next-line: use-lifecycle-interface

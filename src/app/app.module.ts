@@ -10,6 +10,8 @@ import { HeroSelectComponent } from './hero-select/hero-select.component';
 import { MatcherComponent } from './matcher/matcher.component';
 import { HeroListComponent } from './hero-list/hero-list.component';
 import { DiceFooterComponent } from './dice-footer/dice-footer.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ShowHideComponent } from './common/show-hide/show-hide.component';
 
 @NgModule({
   declarations: [
@@ -20,12 +22,14 @@ import { DiceFooterComponent } from './dice-footer/dice-footer.component';
     MatcherComponent,
     HeroListComponent,
     DiceFooterComponent,
+    ShowHideComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

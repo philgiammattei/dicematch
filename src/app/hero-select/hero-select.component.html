@@ -1,15 +1,20 @@
-<div class="hero-select">
-<h3>Select your heroes:</h3>
+<div class='header'><h3>Class Pool</h3><app-show-hide (hiddenEvent)='toggleHidden($event)'></app-show-hide></div>
+<div class="body" *ngIf="!isHidden">
+<div class="hero-buttons">
 <button *ngFor="let hero of heroes" (click)="toggleHero(hero)"
   [ngClass]="{'hero-selected': hero.selected,
-  'hero-unselected': !hero.selected}">
+  'hero-unselected': !hero.selected}" class="hero-button">
   {{hero.name}}
   </button>
 </div>
 <div class="hero-select-mass">
-  <button (click)="toggleAll(true)">Select All</button>
-  <button (click)="toggleAll(false)">Deselect All</button>
-  <button (click)="toggleSeason(1)">Select/Deselect Season 1</button>
-  <button (click)="toggleSeason(2)">Select/Deselect Season 2</button>
+  <div class="button-row">
+  <button class="utility-button"(click)="toggleAll(true)">Select All</button>
+  <button class="utility-button" (click)="toggleAll(false)">Deselect All</button>
 </div>
-<hr>
+<div class="button-row">
+  <button class="utility-button" (click)="toggleSeason(1)">Select/Deselect Season 1</button>
+  <button class="utility-button" (click)="toggleSeason(2)">Select/Deselect Season 2</button>
+</div>
+</div>
+</div>

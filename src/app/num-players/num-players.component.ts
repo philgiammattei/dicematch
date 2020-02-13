@@ -12,8 +12,11 @@ export class NumPlayersComponent implements OnInit {
   @Input() teamSize: number;
   @Output() numPlayers = new EventEmitter<Player[]>();
   @Output() sizeEmit = new EventEmitter<number>();
+  isHidden: boolean;
 
-  constructor() { }
+  constructor() {
+    this.isHidden = true;
+   }
 
   ngOnInit() {
   }
@@ -27,7 +30,7 @@ export class NumPlayersComponent implements OnInit {
   }
 
   removePlayer() {
-    if (this.players.length > 2) {
+    if (this.players.length > 1) {
       this.players.pop();
       this.numPlayers.emit(this.players);
     }
@@ -37,6 +40,10 @@ export class NumPlayersComponent implements OnInit {
     this.teamSize = size;
     this.sizeEmit.emit(this.teamSize);
     console.log(this.teamSize);
+  }
+
+  toggleHidden(newHidden: boolean) {
+    this.isHidden = newHidden;
   }
 
 }

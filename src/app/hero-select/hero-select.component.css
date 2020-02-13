@@ -1,7 +1,55 @@
+.button-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero-button {
+  display: inline-block;
+  width: 25%;
+  font-family: 'Sigmar One', cursive;
+  font-size: 15px;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 10px;
+  height: 75px;
+
+}
+
 .hero-selected {
-  color: blue;
+  color: black;
+  background-color: blanchedalmond;
 }
 
 .hero-unselected {
-  color: red;
+  color: grey;
+  background-color: lightgray;
+}
+h3 {
+  margin: 0;
+  display: inline-block
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.utility-button {
+  display: inline-block;
+  width: 40%;
+  background-color: darksalmon;
+  font-family: 'Sigmar One', cursive;
+  font-size: 15px;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 10px;
+  height: 75px;
 }

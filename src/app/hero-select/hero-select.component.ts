@@ -11,8 +11,12 @@ export class HeroSelectComponent implements OnInit {
 
   @Input() heroes: Hero[];
   @Output() heroesEmit = new EventEmitter<Hero[]>();
+  isHidden: boolean;
 
-  constructor() { }
+
+  constructor() {
+    this.isHidden = true;
+   }
 
   ngOnInit() {
   }
@@ -38,6 +42,9 @@ export class HeroSelectComponent implements OnInit {
         .forEach(hero => hero.selected = false);
     }
     this.heroesEmit.emit(this.heroes);
+  }
+  toggleHidden(newHidden: boolean) {
+    this.isHidden = newHidden;
   }
 
 }

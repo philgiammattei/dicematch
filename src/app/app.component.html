@@ -3,7 +3,9 @@
 <app-num-players [players]="players" [teamSize]="teamSize"
 (numPlayers)="setPlayers($event)" (sizeEmit)="setTeamSize($event)">
 </app-num-players>
+<hr>
 <app-hero-select [heroes]="heroes" (heroesEmit)="setHeroes($event)"></app-hero-select>
+<hr>
 <app-matcher [tooManyPlayers]="tooManyPlayers"(matchEmit)="matchmake()"></app-matcher>
 <app-hero-list [players]="players" [teamSize]="teamSize"></app-hero-list>
 <app-dice-footer></app-dice-footer>

@@ -1,0 +1,15 @@
+* {
+  font-family: 'Sigmar One', cursive;
+  color: #BFC0C0;
+}
+
+.app-container {
+  max-width: 500px;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  background-color: black;
+}
+
+
+

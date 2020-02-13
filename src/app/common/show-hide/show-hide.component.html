@@ -1,0 +1,4 @@
+<div class="container">
+  <svg *ngIf='isHidden' (click)='toggleHidden()' viewBox="0 0 32 32" class="caret" viewBox="0 0 32 32" aria-hidden="true"><path d="M24 11.305l-7.997 11.39L8 11.305z"/></svg>
+  <svg *ngIf='!isHidden' (click)='toggleHidden()' viewBox="0 0 32 32" class="caret"  viewBox="0 0 32 32" aria-hidden="true"><path d="M8 20.695l7.997-11.39L24 20.695z"/></svg>
+</div>

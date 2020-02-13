@@ -1,0 +1,11 @@
+
+.container {
+  display: inline-block;
+}
+
+.caret {
+  width: 40px;
+  margin: 0;
+  fill: #BFC0C0;
+}
+
