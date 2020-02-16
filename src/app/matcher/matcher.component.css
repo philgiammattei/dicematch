@@ -14,5 +14,8 @@ background-color: #2F4F4F;
 }
 
 @media (max-width: 500px) {
-  font-size: 30px;
+  .match-button {
+    font-size: 30px;
+
+  }
 }
