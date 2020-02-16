@@ -19,7 +19,17 @@
   margin: 10px;
   border-radius: 10px;
   height: 75px;
+}
 
+@media (max-width: 400px) {
+  .hero-button {
+    font-size: 9px;
+  }
+}
+@media (max-width: 500px) {
+  .hero-button {
+    font-size: 10px;
+  }
 }
 
 .hero-selected {

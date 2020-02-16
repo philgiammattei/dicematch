@@ -2,3 +2,15 @@ p {
   margin-top: 100px;
   text-align: center;
 }
+
+a {
+  color: purple;
+}
+
+a:hover {
+  color: blanchedalmond;
+}
+
+a:visited {
+  color: lavender;
+}

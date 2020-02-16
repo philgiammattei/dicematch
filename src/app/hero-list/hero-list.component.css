@@ -1,0 +1,22 @@
+.hero-card {
+  background-color: blanchedalmond;
+  color: black;
+  width: 90%;
+  height: 200px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.hero-name {
+text-align: center;
+width: 100%;
+}
+
+.team-name {
+  margin: 20px;
+  text-align: center;
+}
